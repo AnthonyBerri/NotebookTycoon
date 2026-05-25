@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c6i7gxxevxfuy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2uoy"]
+bg_color = Color(0.39215687, 0.39215687, 0.39215687, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+
+[node name="Graphic" type="Control" unique_id=497960244]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=741767998]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 300.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s2uoy")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=405480666]
+points = PackedVector2Array(35, 104, 88, 63, 149, 133, 241, 74, 267, 186, 346, 104, 346, 213, 397, 188)
+default_color = Color(0, 0.5058824, 0, 1)
