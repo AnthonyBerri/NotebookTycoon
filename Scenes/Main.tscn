@@ -2,7 +2,7 @@
 
 [node name="Main" type="Node" unique_id=1164011906]
 
-[node name="UI" type="Control" parent="." unique_id=958041309]
+[node name="HUD" type="Control" parent="." unique_id=958041309]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="TBar" type="Panel" parent="UI" unique_id=16484518]
+[node name="TBar" type="Panel" parent="HUD" unique_id=16484518]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -19,7 +19,7 @@ anchor_bottom = 0.16049382
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="MenuBtn" type="Button" parent="UI/TBar" unique_id=379901917]
+[node name="MenuBtn" type="Button" parent="HUD/TBar" unique_id=379901917]
 layout_mode = 0
 anchor_left = 0.0069444445
 anchor_top = 0.07692308
@@ -28,7 +28,7 @@ anchor_bottom = 0.9230769
 text = "Menu"
 metadata/_edit_use_anchors_ = true
 
-[node name="DateBg" type="Panel" parent="UI/TBar" unique_id=799932009]
+[node name="DateBg" type="Panel" parent="HUD/TBar" unique_id=799932009]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1796875
@@ -39,7 +39,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Date" type="Label" parent="UI/TBar/DateBg" unique_id=1420272959]
+[node name="Date" type="Label" parent="HUD/TBar/DateBg" unique_id=1420272959]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -54,7 +54,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Dia 2/5 Ano 1"
 
-[node name="PointsBg" type="Panel" parent="UI/TBar" unique_id=1604083907]
+[node name="PointsBg" type="Panel" parent="HUD/TBar" unique_id=1604083907]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -68,7 +68,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PointsLbl" type="Label" parent="UI/TBar/PointsBg" unique_id=2115390607]
+[node name="PointsLbl" type="Label" parent="HUD/TBar/PointsBg" unique_id=2115390607]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -80,11 +80,11 @@ offset_top = -11.528001
 offset_right = 73.5
 offset_bottom = 11.471999
 grow_horizontal = 2
-text = "Pontos"
+text = "Pontos de Pesquisa"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Points" type="Label" parent="UI/TBar/PointsBg" unique_id=1236491042]
+[node name="Points" type="Label" parent="HUD/TBar/PointsBg" unique_id=1236491042]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -97,10 +97,10 @@ offset_right = 73.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "0000000000000000"
+text = "0000000000000123"
 horizontal_alignment = 1
 
-[node name="MoneyBg" type="Panel" parent="UI/TBar" unique_id=857827922]
+[node name="MoneyBg" type="Panel" parent="HUD/TBar" unique_id=857827922]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -113,7 +113,7 @@ offset_bottom = 45.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="MoneyLbl" type="Label" parent="UI/TBar/MoneyBg" unique_id=1273387337]
+[node name="MoneyLbl" type="Label" parent="HUD/TBar/MoneyBg" unique_id=1273387337]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -129,7 +129,7 @@ text = "Dinheiro"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Money" type="Label" parent="UI/TBar/MoneyBg" unique_id=1387301254]
+[node name="Money" type="Label" parent="HUD/TBar/MoneyBg" unique_id=1387301254]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -145,7 +145,7 @@ grow_vertical = 2
 text = "$1999"
 horizontal_alignment = 1
 
-[node name="BBar" type="Panel" parent="UI" unique_id=1277102395]
+[node name="BBar" type="Panel" parent="HUD" unique_id=1277102395]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.83950615
@@ -154,7 +154,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="BuyBtn" type="Button" parent="UI/BBar" unique_id=738525891]
+[node name="BuyBtn" type="Button" parent="HUD/BBar" unique_id=738525891]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0069444445
@@ -164,7 +164,7 @@ anchor_bottom = 0.9230769
 text = "Comprar Peças
 "
 
-[node name="DevBtn2" type="Button" parent="UI/BBar" unique_id=441253168]
+[node name="DevBtn2" type="Button" parent="HUD/BBar" unique_id=441253168]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4314236
@@ -176,7 +176,7 @@ grow_vertical = 2
 text = "Desenvolver Produto"
 metadata/_edit_use_anchors_ = true
 
-[node name="RnDBtn3" type="Button" parent="UI/BBar" unique_id=36475281]
+[node name="RnDBtn3" type="Button" parent="HUD/BBar" unique_id=36475281]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.8559028
