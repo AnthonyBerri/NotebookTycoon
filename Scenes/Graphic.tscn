@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c6i7gxxevxfuy"]
 
+[ext_resource type="Script" uid="uid://c6mp1g4i8h7gq" path="res://Scenes/graphic.gd" id="1_g4x7r"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2uoy"]
 bg_color = Color(0.39215687, 0.39215687, 0.39215687, 1)
 border_width_left = 2
@@ -13,6 +15,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 400.0
 offset_bottom = 300.0
+script = ExtResource("1_g4x7r")
 
 [node name="Panel" type="Panel" parent="." unique_id=741767998]
 layout_mode = 0
@@ -36,3 +39,5 @@ default_color = Color(0, 0.3529412, 0.78431374, 1)
 visible = false
 points = PackedVector2Array(20, 135, 70, 107, 125, 18, 167, 46, 231, 27, 293, 59, 349, 12, 381, 114)
 default_color = Color(0, 0.3529412, 0.78431374, 1)
+
+[connection signal="grafico" from="." to="." method="_on_grafico"]
