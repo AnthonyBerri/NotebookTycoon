@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://0ghmojrv2i0x"]
 
+[ext_resource type="Script" uid="uid://43fdsynrqtnn" path="res://Sprites/main.gd" id="1_r150o"]
+
 [node name="Main" type="Node" unique_id=1164011906]
+script = ExtResource("1_r150o")
 
 [node name="HUD" type="Control" parent="." unique_id=958041309]
 layout_mode = 3
@@ -15,7 +18,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 0.16049382
+anchor_bottom = 0.11481482
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
@@ -188,3 +191,5 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Pesquisar"
 metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="HUD/BBar/DevBtn2" to="." method="_on_dev_btn_2_pressed"]

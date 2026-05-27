@@ -468,6 +468,7 @@ theme = SubResource("Theme_aodgd")
 theme_override_styles/up_background = SubResource("StyleBoxFlat_282n6")
 theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_4biul")
 theme_override_styles/field_and_buttons_separator = SubResource("StyleBoxFlat_d4vl5")
+value = 1.0
 
 [node name="PanelContainer2" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1792555098]
 custom_minimum_size = Vector2(400, 0)
