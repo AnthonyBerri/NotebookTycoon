@@ -1,0 +1,518 @@
+[gd_scene format=3 uid="uid://bc4fuebh1b44g"]
+
+[ext_resource type="Texture2D" uid="uid://dbxv567o7oig4" path="res://Sprites/26799-16x16x4.png" id="1_8tcvj"]
+[ext_resource type="FontFile" uid="uid://d35t88cj5sbs4" path="res://Fonts/w95f.woff2" id="2_kjiey"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dswa6"]
+bg_color = Color(0, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myb6p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0s1qy"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4wom"]
+bg_color = Color(0, 0, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8tcvj"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjiey"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wie5n"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmwg4"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_doyyf"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71mlr"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vs4i1"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyeni"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07p11"]
+bg_color = Color(0, 0, 0, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mhe6"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_birfk"]
+bg_color = Color(18.892157, 18.892157, 18.892157, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[node name="ProductDevelopment" type="Control" unique_id=1137632724]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=771456200]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.5019608, 0.5019608, 1)
+
+[node name="Control" type="Control" parent="." unique_id=617745925]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1102975520]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.004
+anchor_right = 0.503
+anchor_bottom = 1.0
+offset_top = -0.17200017
+offset_right = -0.4560547
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dswa6")
+
+[node name="Panel2" type="Panel" parent="Control" unique_id=1615088453]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -102.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_myb6p")
+
+[node name="Control2" type="Control" parent="." unique_id=455329883]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TBar" type="Panel" parent="Control2" unique_id=1200758130]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.16049382
+grow_horizontal = 2
+
+[node name="MenuBtn" type="Button" parent="Control2/TBar" unique_id=1276804485]
+layout_mode = 0
+anchor_left = 0.0069444445
+anchor_top = 0.07692308
+anchor_right = 0.14409722
+anchor_bottom = 0.9230769
+text = "Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="DateBg" type="Panel" parent="Control2/TBar" unique_id=1808437922]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1796875
+anchor_top = 0.31730768
+anchor_right = 0.3090278
+anchor_bottom = 0.7019231
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Date" type="Label" parent="Control2/TBar/DateBg" unique_id=596092889]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.5
+offset_top = -12.5
+offset_right = 51.5
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dia 2/5 Ano 1"
+
+[node name="PointsBg" type="Panel" parent="Control2/TBar" unique_id=805821426]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = -44.0
+offset_right = 79.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PointsLbl" type="Label" parent="Control2/TBar/PointsBg" unique_id=1739514462]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.22190909
+anchor_right = 0.5
+anchor_bottom = 0.22190909
+offset_left = -73.5
+offset_top = -11.528001
+offset_right = 73.5
+offset_bottom = 11.471999
+grow_horizontal = 2
+text = "Pontos de Pesquisa"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Points" type="Label" parent="Control2/TBar/PointsBg" unique_id=1214078587]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = -11.5
+offset_right = 73.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000000000000123"
+horizontal_alignment = 1
+
+[node name="MoneyBg" type="Panel" parent="Control2/TBar" unique_id=1599582741]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -43.0
+offset_right = -8.0
+offset_bottom = 45.000004
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="MoneyLbl" type="Label" parent="Control2/TBar/MoneyBg" unique_id=1623691785]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.22190909
+anchor_right = 0.5
+anchor_bottom = 0.22190909
+offset_left = -73.5
+offset_top = -11.528001
+offset_right = 73.5
+offset_bottom = 11.471999
+grow_horizontal = 2
+text = "Dinheiro"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Money" type="Label" parent="Control2/TBar/MoneyBg" unique_id=1338381378]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = -11.5
+offset_right = 73.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "$1999"
+horizontal_alignment = 1
+
+[node name="Janela" type="Panel" parent="." unique_id=1219399462]
+custom_minimum_size = Vector2(1200, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = -200.0
+offset_right = 425.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0s1qy")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Janela" unique_id=862687457]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Janela/MarginContainer2" unique_id=1950486273]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Titulo" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer" unique_id=494274228]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y4wom")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/Titulo" unique_id=1176539265]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=1414195727]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("1_8tcvj")
+
+[node name="Label" type="Label" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=1644315906]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+text = "NotebookTycoon - Criação de Produto"
+
+[node name="Control" type="Control" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=2044588037]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control" unique_id=1003460205]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -109.53497
+offset_top = -20.0
+offset_right = -5.534973
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer" unique_id=1427324970]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8tcvj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kjiey")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wie5n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_lmwg4")
+text = "_"
+
+[node name="Button2" type="Button" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer" unique_id=647321478]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_doyyf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71mlr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vs4i1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_lmwg4")
+text = "[ ]"
+
+[node name="Button3" type="Button" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer" unique_id=488180063]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_doyyf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71mlr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wyeni")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_lmwg4")
+text = "X"
+
+[node name="EditArea" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer" unique_id=1614660427]
+custom_minimum_size = Vector2(500, 600)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_07p11")
+
+[node name="MarginContainer" type="MarginContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea" unique_id=538999592]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer" unique_id=2062997510]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4mhe6")
+
+[node name="MarginContainer" type="MarginContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer" unique_id=1177506485]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer" unique_id=43042820]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_birfk")
+
+[node name="MarginContainer" type="MarginContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/PanelContainer" unique_id=1184888263]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer" unique_id=980806219]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=879197880]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+text = "placa mãe"
+
+[node name="OptionButton" type="OptionButton" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1231641280]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+selected = 0
+item_count = 3
+popup/item_0/text = "Placa mãe boa"
+popup/item_0/id = 0
+popup/item_1/text = "Placa mãe mediana"
+popup/item_1/id = 1
+popup/item_2/text = "Placa mãe barata"
+popup/item_2/id = 2
+
+[node name="Label2" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1789426461]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+text = "placa mãe"
+
+[node name="OptionButton2" type="OptionButton" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=215843370]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+selected = 0
+item_count = 3
+popup/item_0/text = "Placa mãe boa"
+popup/item_0/id = 0
+popup/item_1/text = "Placa mãe mediana"
+popup/item_1/id = 1
+popup/item_2/text = "Placa mãe barata"
+popup/item_2/id = 2
+
+[node name="Label3" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1067255458]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+text = "placa mãe"
+
+[node name="OptionButton3" type="OptionButton" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1061975696]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+selected = 0
+item_count = 3
+popup/item_0/text = "Placa mãe boa"
+popup/item_0/id = 0
+popup/item_1/text = "Placa mãe mediana"
+popup/item_1/id = 1
+popup/item_2/text = "Placa mãe barata"
+popup/item_2/id = 2
+
+[node name="Label4" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1398517164]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+text = "placa mãe"
+
+[node name="OptionButton4" type="OptionButton" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1175651696]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+selected = 0
+item_count = 3
+popup/item_0/text = "Placa mãe boa"
+popup/item_0/id = 0
+popup/item_1/text = "Placa mãe mediana"
+popup/item_1/id = 1
+popup/item_2/text = "Placa mãe barata"
+popup/item_2/id = 2
