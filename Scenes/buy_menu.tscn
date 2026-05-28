@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://c2dggdcldpbmw" path="res://Scenes/leave_menu.gd" id="1_6wwev"]
 [ext_resource type="Script" uid="uid://dk6prckgx50ag" path="res://Scenes/buy_menu.gd" id="1_20x33"]
-[ext_resource type="Texture2D" uid="uid://cwnmnnibljh7c" path="res://Sprites/placeholder_hdd.png" id="2_20x33"]
-[ext_resource type="Texture2D" uid="uid://dryjbe54f6fai" path="res://Sprites/placeholder_ram.png" id="3_r00tc"]
-[ext_resource type="Texture2D" uid="uid://ceiood0tphg6y" path="res://Sprites/placeholder_placamae.png" id="4_ub5ex"]
-[ext_resource type="Texture2D" uid="uid://dr1gc37jf30au" path="res://Sprites/placeholder_cpu.png" id="5_13ovg"]
-[ext_resource type="Texture2D" uid="uid://bqiruot28k8v1" path="res://Sprites/placeholder_lock.png" id="6_ciwwl"]
+[ext_resource type="Texture2D" uid="uid://cnw3hbqgcbav0" path="res://Sprites/placeholder_hdd.png" id="2_20x33"]
+[ext_resource type="Texture2D" uid="uid://cf61v6mw6y410" path="res://Sprites/placeholder_ram.png" id="3_r00tc"]
+[ext_resource type="Texture2D" uid="uid://csgjueyij5g5s" path="res://Sprites/placeholder_placamae.png" id="4_ub5ex"]
+[ext_resource type="Texture2D" uid="uid://qul0wel0dfju" path="res://Sprites/placeholder_cpu.png" id="5_13ovg"]
+[ext_resource type="Texture2D" uid="uid://dgf688ehvl3p6" path="res://Sprites/placeholder_lock.png" id="6_ciwwl"]
+[ext_resource type="Script" uid="uid://ce26cdf78bvws" path="res://Scenes/itens_compra.gd" id="8_r00tc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjgbg"]
 content_margin_left = 0.0
@@ -84,6 +85,7 @@ icon_alignment = 1
 script = ExtResource("1_6wwev")
 
 [node name="Filtros" type="Control" parent="." unique_id=410974424]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -269,15 +271,23 @@ texture = ExtResource("6_ciwwl")
 stretch_mode = 4
 
 [node name="ItensCompra" type="Control" parent="." unique_id=98718081]
-visible = false
 anchors_preset = 0
+script = ExtResource("8_r00tc")
 
-[node name="MenuButton" type="OptionButton" parent="ItensCompra" unique_id=617296971]
+[node name="ListaCompra" type="OptionButton" parent="ItensCompra" unique_id=617296971]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 60.0
 offset_right = 501.0
 offset_bottom = 95.0
+flat = true
+item_count = 3
+popup/item_0/text = "Erro"
+popup/item_0/id = 0
+popup/item_1/text = "Erro"
+popup/item_1/id = 1
+popup/item_2/text = "Erro"
+popup/item_2/id = 2
 
 [node name="VoltarMenu" type="Button" parent="ItensCompra" unique_id=1420035326]
 layout_mode = 1
@@ -292,9 +302,19 @@ grow_vertical = 2
 text = "◀"
 icon_alignment = 1
 
+[node name="CompraBtn" type="Button" parent="ItensCompra" unique_id=605018609]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 388.0
+offset_right = 502.0
+offset_bottom = 426.0
+text = "Comprar"
+
+[connection signal="atualizar_lista" from="." to="ItensCompra" method="_on_buy_menu_atualizar_lista"]
 [connection signal="pressed" from="TBar/LeaveMenu" to="TBar/LeaveMenu" method="_on_pressed"]
 [connection signal="pressed" from="Filtros/HddBtn" to="." method="_on_hdd_btn_pressed"]
 [connection signal="pressed" from="Filtros/RamBtn" to="." method="_on_ram_btn_pressed"]
 [connection signal="pressed" from="Filtros/MbrBtn" to="." method="_on_mbr_btn_pressed"]
 [connection signal="pressed" from="Filtros/CPUBtn" to="." method="_on_cpu_btn_pressed"]
 [connection signal="pressed" from="ItensCompra/VoltarMenu" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="ItensCompra/CompraBtn" to="ItensCompra" method="_on_button_pressed"]
