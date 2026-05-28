@@ -14,13 +14,14 @@ extends Control
 
 signal janela_fechada
 
+var custo_total = 0
 
 func _ready() -> void:
 	atualizar_status_producao()
 
 func _on_produzir_button_pressed():
 	var quantidade = quantidade_spinbox.value
-	
+	DadosGlobais.dinheiro -= custo_total
 	print("Iniciando fabricação de ", quantidade, " notebooks!")
 
 func _on_qualquer_peca_item_selected(index):
@@ -28,7 +29,7 @@ func _on_qualquer_peca_item_selected(index):
 
 func atualizar_status_producao():
 	var custo_base = 150
-	var custo_total = custo_base * quantidade_spinbox.value
+	custo_total = custo_base * quantidade_spinbox.value
 	
 	total_label.text = "Dinheiro gasto/prod: [$" + formatar_dinheiro_tycoon(custo_total) + "]"
 
@@ -62,7 +63,7 @@ func atualizar_status_producao_index(indexes: Array[int]):
 	for index in indexes:
 		custo_total_por_peca += custo_base * (index + 1)
 		 
-	var custo_total = custo_total_por_peca * quantidade_spinbox.value
+	custo_total = custo_total_por_peca * quantidade_spinbox.value
 	total_label.text = "Dinheiro gasto/prod: [$" + formatar_dinheiro_tycoon(custo_total) + "]"
 	
 

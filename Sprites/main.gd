@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$HUD/TBar/MoneyBg/Money.text = "$ " + str(DadosGlobais.dinheiro)
 
 
 func _on_dev_btn_2_pressed() -> void:
