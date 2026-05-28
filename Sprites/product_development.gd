@@ -12,7 +12,9 @@ extends Control
 
 @onready var btb_produzir = $Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/Panel/Button4
 
-# Called when the node enters the scene tree for the first time.
+signal janela_fechada
+
+
 func _ready() -> void:
 	atualizar_status_producao()
 
@@ -63,4 +65,7 @@ func atualizar_status_producao_index(indexes: Array[int]):
 	var custo_total = custo_total_por_peca * quantidade_spinbox.value
 	total_label.text = "Dinheiro gasto/prod: [$" + formatar_dinheiro_tycoon(custo_total) + "]"
 	
-	
+
+func _on_button_3_pressed() -> void:
+	janela_fechada.emit()
+	queue_free()

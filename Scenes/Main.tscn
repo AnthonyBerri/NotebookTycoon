@@ -192,4 +192,5 @@ grow_vertical = 2
 text = "Pesquisar"
 metadata/_edit_use_anchors_ = true
 
+[connection signal="pressed" from="HUD/BBar/BuyBtn" to="." method="_on_buy_btn_pressed"]
 [connection signal="pressed" from="HUD/BBar/DevBtn2" to="." method="_on_dev_btn_2_pressed"]

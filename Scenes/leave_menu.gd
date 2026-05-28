@@ -1,6 +1,10 @@
 extends Button
 
-@onready var parent = $"../"
+@onready var parent = $"../../"
+
+signal janela_fechada
 
 func _on_pressed() -> void:
-	parent.visible = false
+	janela_fechada.emit()
+	
+	parent.queue_free()

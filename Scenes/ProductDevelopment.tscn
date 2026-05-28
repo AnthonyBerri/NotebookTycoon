@@ -590,6 +590,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_wyeni")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_lmwg4")
 text = "Produzir"
 
+[connection signal="pressed" from="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="item_selected" from="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/OptionButton" to="." method="_on_qualquer_peca_item_selected"]
 [connection signal="item_selected" from="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/OptionButton2" to="." method="_on_qualquer_peca_item_selected"]
 [connection signal="item_selected" from="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/OptionButton3" to="." method="_on_qualquer_peca_item_selected"]
