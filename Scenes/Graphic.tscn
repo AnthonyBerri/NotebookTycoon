@@ -12,32 +12,48 @@ border_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
 
 [node name="Graphic" type="Control" unique_id=497960244]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 400.0
-offset_bottom = 300.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_g4x7r")
 
 [node name="Panel" type="Panel" parent="." unique_id=741767998]
-layout_mode = 0
-offset_right = 400.0
-offset_bottom = 300.0
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_s2uoy")
 
-[node name="Ruim" type="Line2D" parent="." unique_id=405480666]
+[node name="Ruim" type="Line2D" parent="Panel" unique_id=405480666]
 visible = false
-position = Vector2(-23.000002, -7.000004)
-scale = Vector2(1.0964912, 1.0964912)
+position = Vector2(-38.22174, -5.1488953)
+scale = Vector2(1.1713369, 1.1043183)
 points = PackedVector2Array(39.215996, 152.30399, 83.904, 220.704, 134.976, 229.82399, 179.66399, 196.99199, 236.20798, 223.43999, 285.456, 253.53598, 331.968, 237.12, 367.53598, 269.03998)
 default_color = Color(0, 0.3529412, 0.78431374, 1)
 
-[node name="Medio" type="Line2D" parent="." unique_id=922046315]
+[node name="Medio" type="Line2D" parent="Panel" unique_id=922046315]
 visible = false
+position = Vector2(-18.207567, -9.302317)
+scale = Vector2(1.0754718, 0.82558125)
 points = PackedVector2Array(26, 252, 73, 185, 123, 122, 173, 117, 228, 100, 296, 133, 343, 195, 377, 154)
 default_color = Color(0, 0.3529412, 0.78431374, 1)
 
-[node name="Bom" type="Line2D" parent="." unique_id=1337109022]
+[node name="Bom" type="Line2D" parent="Panel" unique_id=1337109022]
 visible = false
-points = PackedVector2Array(20, 135, 70, 107, 125, 18, 167, 46, 231, 27, 293, 59, 349, 12, 381, 114)
+position = Vector2(-11.577428, -5.304824)
+scale = Vector2(1.0577428, 1.0779643)
+points = PackedVector2Array(20, 135, 70, 107, 125, 18, 167, 46, 231, 27, 293, 59, 349, 12, 384.38208, 74.496704)
 default_color = Color(0, 0.3529412, 0.78431374, 1)
 
 [connection signal="grafico" from="." to="." method="_on_grafico"]

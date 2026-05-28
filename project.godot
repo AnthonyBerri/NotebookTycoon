@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Notebook Tycoon"
-run/main_scene="uid://bwiay1kivw80m"
+run/main_scene="uid://0ghmojrv2i0x"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,8 +1,8 @@
 extends Control
 
-@onready var Ruim = $"./Ruim"
-@onready var Medio = $"./Medio"
-@onready var Bom = $"./Bom"
+@onready var Ruim = $"./Panel/Ruim"
+@onready var Medio = $"./Panel/Medio"
+@onready var Bom = $"./Panel/Bom"
 
 signal grafico(qual: int)
 
