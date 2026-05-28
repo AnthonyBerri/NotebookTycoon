@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://43fdsynrqtnn" path="res://Scripts/main.gd" id="1_r150o"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r150o"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
 [node name="Main" type="Node" unique_id=1164011906]
 script = ExtResource("1_r150o")
 
@@ -15,6 +18,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="TBar" type="Panel" parent="HUD" unique_id=16484518]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -31,47 +35,65 @@ anchor_bottom = 0.9230769
 text = "Menu"
 metadata/_edit_use_anchors_ = true
 
-[node name="DateBg" type="Panel" parent="HUD/TBar" unique_id=799932009]
+[node name="BBar" type="Panel" parent="HUD" unique_id=1277102395]
+custom_minimum_size = Vector2(1920, 64)
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.1796875
-anchor_top = 0.31730768
-anchor_right = 0.3090278
-anchor_bottom = 0.7019231
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_r150o")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/BBar" unique_id=2049850661]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 
-[node name="Date" type="Label" parent="HUD/TBar/DateBg" unique_id=1420272959]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -51.5
-offset_top = -12.5
-offset_right = 51.5
-offset_bottom = 10.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Dia 2/5 Ano 1"
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/BBar/MarginContainer" unique_id=1278812411]
+layout_mode = 2
 
-[node name="PointsBg" type="Panel" parent="HUD/TBar" unique_id=1604083907]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -79.0
-offset_top = -44.0
-offset_right = 79.0
-offset_bottom = 44.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Button" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer" unique_id=592149178]
+custom_minimum_size = Vector2(200, 64)
+layout_mode = 2
+size_flags_vertical = 4
+text = "Menu"
 
-[node name="PointsLbl" type="Label" parent="HUD/TBar/PointsBg" unique_id=2115390607]
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/BBar/MarginContainer/HBoxContainer" unique_id=633193306]
+layout_mode = 2
+
+[node name="BuyBtn" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=738525891]
+layout_mode = 2
+text = "Comprar Peças
+"
+
+[node name="DevBtn2" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=441253168]
+layout_mode = 2
+text = "Desenvolver Produto"
+
+[node name="RnDBtn3" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=36475281]
+layout_mode = 2
+text = "Pesquisar"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HUD/BBar/MarginContainer/HBoxContainer" unique_id=1395655681]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 32
+
+[node name="PointsBg" type="Panel" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=1604083907]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="PointsLbl" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/PointsBg" unique_id=2115390607]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -87,7 +109,7 @@ text = "Pontos de Pesquisa"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Points" type="Label" parent="HUD/TBar/PointsBg" unique_id=1236491042]
+[node name="Points" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/PointsBg" unique_id=1236491042]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -103,21 +125,11 @@ grow_vertical = 2
 text = "0000000000000123"
 horizontal_alignment = 1
 
-[node name="MoneyBg" type="Panel" parent="HUD/TBar" unique_id=857827922]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -166.0
-offset_top = -43.0
-offset_right = -8.0
-offset_bottom = 45.000004
-grow_horizontal = 0
-grow_vertical = 2
+[node name="MoneyBg" type="Panel" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=857827922]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
 
-[node name="MoneyLbl" type="Label" parent="HUD/TBar/MoneyBg" unique_id=1273387337]
+[node name="MoneyLbl" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/MoneyBg" unique_id=1273387337]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -133,7 +145,7 @@ text = "Dinheiro"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Money" type="Label" parent="HUD/TBar/MoneyBg" unique_id=1387301254]
+[node name="Money" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/MoneyBg" unique_id=1387301254]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -149,48 +161,10 @@ grow_vertical = 2
 text = "$1999"
 horizontal_alignment = 1
 
-[node name="BBar" type="Panel" parent="HUD" unique_id=1277102395]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.83950615
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Date" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=1420272959]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "DD/MM/AAAA     "
 
-[node name="BuyBtn" type="Button" parent="HUD/BBar" unique_id=738525891]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0069444445
-anchor_top = 0.07692308
-anchor_right = 0.14409722
-anchor_bottom = 0.9230769
-text = "Comprar Peças
-"
-
-[node name="DevBtn2" type="Button" parent="HUD/BBar" unique_id=441253168]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.4314236
-anchor_top = 0.07692308
-anchor_right = 0.5685764
-anchor_bottom = 0.9230769
-grow_horizontal = 2
-grow_vertical = 2
-text = "Desenvolver Produto"
-metadata/_edit_use_anchors_ = true
-
-[node name="RnDBtn3" type="Button" parent="HUD/BBar" unique_id=36475281]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.8559028
-anchor_top = 0.07692308
-anchor_right = 0.9930556
-anchor_bottom = 0.9230769
-grow_horizontal = 2
-grow_vertical = 2
-text = "Pesquisar"
-metadata/_edit_use_anchors_ = true
-
-[connection signal="pressed" from="HUD/BBar/BuyBtn" to="." method="_on_buy_btn_pressed"]
-[connection signal="pressed" from="HUD/BBar/DevBtn2" to="." method="_on_dev_btn_2_pressed"]
+[connection signal="pressed" from="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/BuyBtn" to="." method="_on_buy_btn_pressed"]
+[connection signal="pressed" from="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/DevBtn2" to="." method="_on_dev_btn_2_pressed"]
