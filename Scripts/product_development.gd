@@ -12,9 +12,11 @@ extends Control
 
 @onready var btb_produzir = $Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/Panel/Button4
 
-signal janela_fechada
+signal janela_fechada(produziu : bool, grafico : int)
 
 var custo_total = 0
+
+var grafico
 
 func _ready() -> void:
 	atualizar_status_producao()
@@ -22,6 +24,8 @@ func _ready() -> void:
 func _on_produzir_button_pressed():
 	var quantidade = quantidade_spinbox.value
 	DadosGlobais.dinheiro -= custo_total
+	janela_fechada.emit(true, 0)
+	queue_free()
 	print("Iniciando fabricação de ", quantidade, " notebooks!")
 
 func _on_qualquer_peca_item_selected(index):
@@ -68,5 +72,5 @@ func atualizar_status_producao_index(indexes: Array[int]):
 	
 
 func _on_button_3_pressed() -> void:
-	janela_fechada.emit()
+	janela_fechada.emit(false, 0)
 	queue_free()

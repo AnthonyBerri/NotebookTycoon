@@ -11,6 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$HUD/TBar/MoneyBg/Money.text = "$ " + str(DadosGlobais.dinheiro)
+	$HUD/TBar/PointsBg/Points.text = str(DadosGlobais.pontos)
 
 
 func _on_dev_btn_2_pressed() -> void:
@@ -37,5 +38,11 @@ func _on_buy_product_fechado():
 	
 	$HUD/BBar/BuyBtn.disabled = false
 	
-func _on_product_development_fechado():
+func _on_product_development_fechado(produziu : bool, grafico : int):
 	$HUD/BBar.show()
+	if(produziu == true):
+		var cena_graficos = preload("res://Scenes/Graphic.tscn")
+		var instancia_ui = cena_graficos.instantiate()
+		$HUD.add_child(instancia_ui)
+		instancia_ui._on_grafico(grafico)
+		
