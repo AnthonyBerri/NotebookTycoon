@@ -1,8 +1,8 @@
 extends Control
 
-@onready var Ruim = $"./Panel/Ruim"
-@onready var Medio = $"./Panel/Medio"
-@onready var Bom = $"./Panel/Bom"
+@onready var Ruim = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel/Ruim
+@onready var Medio = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel/Medio
+@onready var Bom = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel/Bom
 
 signal grafico(qual: int)
 

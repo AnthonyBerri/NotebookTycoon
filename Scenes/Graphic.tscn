@@ -1,6 +1,89 @@
 [gd_scene format=3 uid="uid://c6i7gxxevxfuy"]
 
-[ext_resource type="Script" path="res://Scenes/graphic.gd" id="1_g4x7r"]
+[ext_resource type="Script" uid="uid://c6mp1g4i8h7gq" path="res://Scenes/graphic.gd" id="1_g4x7r"]
+[ext_resource type="Texture2D" uid="uid://b3xqm31k6625x" path="res://Sprites/Internet_Explorer_1997_Icon_Beta.webp" id="2_di26w"]
+[ext_resource type="FontFile" uid="uid://d35t88cj5sbs4" path="res://Fonts/w95f.woff2" id="3_gaa0n"]
+[ext_resource type="Texture2D" uid="uid://bprl6vjxhcbs5" path="res://Images/PlaceholderNotebook.png" id="4_8u75l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxqqh"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tsc3"]
+bg_color = Color(0, 0, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffu3i"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivmla"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnilv"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rbenj"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vr2p"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jru2g"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7si1c"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rq5g7"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2h0x"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rig8p"]
+bg_color = Color(0, 0, 0, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c77e0"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y71pq"]
+bg_color = Color(18.892157, 18.892157, 18.892157, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2uoy"]
 bg_color = Color(0.39215687, 0.39215687, 0.39215687, 1)
@@ -9,6 +92,14 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0g350"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0076186024, 0.0076186024, 0.0076186024, 1)
 
 [node name="Graphic" type="Control" unique_id=497960244]
 layout_mode = 3
@@ -19,41 +110,274 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g4x7r")
 
-[node name="Panel" type="Panel" parent="." unique_id=741767998]
-custom_minimum_size = Vector2(400, 300)
+[node name="ColorRect" type="ColorRect" parent="." unique_id=548256327]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.5019608, 0.5019608, 1)
+
+[node name="Janela" type="Panel" parent="." unique_id=1408742673]
+custom_minimum_size = Vector2(1200, 800)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -150.0
-offset_right = 200.0
-offset_bottom = 150.0
+offset_left = -425.0
+offset_top = -200.0
+offset_right = 425.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gxqqh")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Janela" unique_id=411464476]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Janela/MarginContainer2" unique_id=674292868]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Titulo" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer" unique_id=1972096535]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2tsc3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/Titulo" unique_id=1961922743]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=259628845]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_di26w")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=354112178]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_gaa0n")
+theme_override_font_sizes/font_size = 24
+text = "NotebookTycoon - Internet Explorer"
+
+[node name="Control" type="Control" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=1207524075]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control" unique_id=174199030]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -109.53497
+offset_top = -20.0
+offset_right = -5.534973
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer" unique_id=1186982255]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gaa0n")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ffu3i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ivmla")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xnilv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_rbenj")
+text = "_"
+
+[node name="Button2" type="Button" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer" unique_id=1542819893]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vr2p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jru2g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7si1c")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_rbenj")
+text = "[ ]"
+
+[node name="Button3" type="Button" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer" unique_id=849780552]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vr2p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jru2g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rq5g7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_rbenj")
+text = "X"
+
+[node name="Space" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer" unique_id=239626760]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b2h0x")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/Space" unique_id=159535184]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="EditArea" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer" unique_id=1020579869]
+custom_minimum_size = Vector2(500, 600)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rig8p")
+
+[node name="MarginContainer" type="MarginContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea" unique_id=1313795356]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer" unique_id=512944035]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c77e0")
+
+[node name="MarginContainer" type="MarginContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer" unique_id=454433131]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer" unique_id=782502711]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=569761155]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y71pq")
+
+[node name="MarginContainer" type="MarginContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer" unique_id=2002883698]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer" unique_id=1129671162]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Panel" type="Panel" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=741767998]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_s2uoy")
 
-[node name="Ruim" type="Line2D" parent="Panel" unique_id=405480666]
+[node name="Ruim" type="Line2D" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel" unique_id=405480666]
 visible = false
 position = Vector2(-38.22174, -5.1488953)
 scale = Vector2(1.1713369, 1.1043183)
 points = PackedVector2Array(39.215996, 152.30399, 83.904, 220.704, 134.976, 229.82399, 179.66399, 196.99199, 236.20798, 223.43999, 285.456, 253.53598, 331.968, 237.12, 367.53598, 269.03998)
 default_color = Color(0, 0.3529412, 0.78431374, 1)
 
-[node name="Medio" type="Line2D" parent="Panel" unique_id=922046315]
+[node name="Medio" type="Line2D" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel" unique_id=922046315]
 visible = false
 position = Vector2(-18.207567, -9.302317)
 scale = Vector2(1.0754718, 0.82558125)
 points = PackedVector2Array(26, 252, 73, 185, 123, 122, 173, 117, 228, 100, 296, 133, 343, 195, 377, 154)
 default_color = Color(0, 0.3529412, 0.78431374, 1)
 
-[node name="Bom" type="Line2D" parent="Panel" unique_id=1337109022]
+[node name="Bom" type="Line2D" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel" unique_id=1337109022]
 visible = false
 position = Vector2(-11.577428, -5.304824)
 scale = Vector2(1.0577428, 1.0779643)
 points = PackedVector2Array(20, 135, 70, 107, 125, 18, 167, 46, 231, 27, 293, 59, 349, 12, 384.38208, 74.496704)
 default_color = Color(0, 0.3529412, 0.78431374, 1)
+
+[node name="Label" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=37797479]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gaa0n")
+theme_override_font_sizes/font_size = 24
+text = "Aqui entra a descrição do grafico, se foi bom, medio, ou ruim."
+autowrap_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1473803238]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0g350")
+
+[node name="MarginContainer" type="MarginContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer2" unique_id=2120233362]
+custom_minimum_size = Vector2(716, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer2/MarginContainer" unique_id=1962450558]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=816318598]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Label2" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/VBoxContainer" unique_id=359032211]
+custom_minimum_size = Vector2(475, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gaa0n")
+theme_override_font_sizes/font_size = 46
+text = "Titulo do Notebook"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/VBoxContainer" unique_id=176459558]
+custom_minimum_size = Vector2(475, 136)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gaa0n")
+theme_override_font_sizes/font_size = 24
+text = "Aqui vai a descriação do notebook... Peças, desempenho para a época. Palavras  aleatorias para ocupar o tamanho certo isso daqui ajasdjaksdjakjdkad dasdljkaslk djkakl dkja skldkas    ld askjdlaskdl asdadjaks adoasda."
+horizontal_alignment = 3
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=404649708]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("4_8u75l")
+expand_mode = 1
 
 [connection signal="grafico" from="." to="." method="_on_grafico"]
