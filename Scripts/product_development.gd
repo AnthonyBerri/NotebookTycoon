@@ -19,6 +19,7 @@ var custo_total = 0
 var grafico
 
 func _ready() -> void:
+	atualizar_pecas_compradas()
 	atualizar_status_producao()
 
 func _on_produzir_button_pressed():
@@ -51,9 +52,33 @@ func formatar_dinheiro_tycoon(valor: float) -> String:
 	else:
 		return "$ %.1f%s" % [valor_reduzido, sufixos[index]]
 
+func atualizar_pecas_compradas():
+	if (DadosCompra.HddRComprado == false): 
+		armazenamento_options.set_item_disabled(0, true)
+		armazenamento_options.selected = -1
+	if (DadosCompra.HddMComprado == false): armazenamento_options.set_item_disabled(1, true)
+	if (DadosCompra.HddBComprado == false): armazenamento_options.set_item_disabled(2, true)
+	
+	if (DadosCompra.RamRComprada == false): 
+		ram_options.set_item_disabled(0, true)
+		ram_options.selected = -1
+	if (DadosCompra.RamMComprada == false): ram_options.set_item_disabled(1, true)
+	if (DadosCompra.RamBComprada == false): ram_options.set_item_disabled(2, true)
+	
+	if (DadosCompra.MbrRComprada == false): 
+		placa_mae_options.set_item_disabled(0, true)
+		placa_mae_options.selected = -1
+	if (DadosCompra.MbrMComprada == false): placa_mae_options.set_item_disabled(1, true)
+	if (DadosCompra.MbrBComprada == false): placa_mae_options.set_item_disabled(2, true)
+	
+	if (DadosCompra.CpuRComprada == false): 
+		processador_options.set_item_disabled(0, true)
+		processador_options.selected = -1
+	if (DadosCompra.CpuMComprada == false): processador_options.set_item_disabled(1, true)
+	if (DadosCompra.CpuBComprada == false): processador_options.set_item_disabled(2, true)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var pm_id = placa_mae_options.selected
 	var p_id = processador_options.selected
 	var rm_id = ram_options.selected
@@ -70,6 +95,7 @@ func atualizar_status_producao_index(indexes: Array[int]):
 	custo_total = custo_total_por_peca * quantidade_spinbox.value
 	total_label.text = "Dinheiro gasto/prod: [$" + formatar_dinheiro_tycoon(custo_total) + "]"
 	
+
 
 func _on_button_3_pressed() -> void:
 	janela_fechada.emit(false, 0)

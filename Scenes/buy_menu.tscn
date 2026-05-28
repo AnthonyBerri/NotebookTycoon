@@ -85,7 +85,6 @@ icon_alignment = 1
 script = ExtResource("1_6wwev")
 
 [node name="Filtros" type="Control" parent="." unique_id=410974424]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -271,6 +270,7 @@ texture = ExtResource("6_ciwwl")
 stretch_mode = 4
 
 [node name="ItensCompra" type="Control" parent="." unique_id=98718081]
+visible = false
 anchors_preset = 0
 script = ExtResource("8_r00tc")
 
@@ -311,6 +311,7 @@ offset_bottom = 426.0
 text = "Comprar"
 
 [connection signal="atualizar_lista" from="." to="ItensCompra" method="_on_buy_menu_atualizar_lista"]
+[connection signal="janela_fechada" from="TBar/LeaveMenu" to="." method="_on_leave_menu_janela_fechada"]
 [connection signal="pressed" from="TBar/LeaveMenu" to="TBar/LeaveMenu" method="_on_pressed"]
 [connection signal="pressed" from="Filtros/HddBtn" to="." method="_on_hdd_btn_pressed"]
 [connection signal="pressed" from="Filtros/RamBtn" to="." method="_on_ram_btn_pressed"]
