@@ -1,7 +1,7 @@
 extends Node
 
 var dinheiro: float = 35000.0
-var pontos: int = 0
+var pontos: int = 1000
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

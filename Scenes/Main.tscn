@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dqusu4amgh7g"]
+[gd_scene format=3 uid="uid://budpp5julujov"]
 
 [ext_resource type="Script" uid="uid://43fdsynrqtnn" path="res://Scripts/main.gd" id="1_r150o"]
 
@@ -168,3 +168,4 @@ text = "DD/MM/AAAA     "
 
 [connection signal="pressed" from="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/BuyBtn" to="." method="_on_buy_btn_pressed"]
 [connection signal="pressed" from="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/DevBtn2" to="." method="_on_dev_btn_2_pressed"]
+[connection signal="pressed" from="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/RnDBtn3" to="." method="_on_rn_d_btn_3_pressed"]

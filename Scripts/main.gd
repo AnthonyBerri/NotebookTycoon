@@ -1,7 +1,5 @@
 extends Node
 
-@onready var btn_criacao = $HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/DevBtn2
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -34,10 +32,24 @@ func _on_buy_btn_pressed() -> void:
 	$HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/BuyBtn.disabled = true
 	$HUD.add_child(instancia_ui)
 
+func _on_rn_d_btn_3_pressed() -> void:
+	var cena_ui = preload("res://Scenes/RnDMenu.tscn")
+	var instancia_ui = cena_ui.instantiate()
+	var signal_script = instancia_ui.get_node("TBar/LeaveMenu")
+	
+	signal_script.janela_fechada.connect(_on_rnd_menu_fechado)
+	
+	
+	$HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/RnDBtn3.disabled = true
+	$HUD.add_child(instancia_ui)
+
+
 func _on_buy_product_fechado():
-	
 	$HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/BuyBtn.disabled = false
-	
+
+func _on_rnd_menu_fechado():
+	$HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/RnDBtn3.disabled = false
+
 func _on_product_development_fechado(produziu : bool, grafico : int):
 	if(produziu == true && grafico >= 0):
 		var cena_graficos = preload("res://Scenes/Graphic.tscn")

@@ -2,6 +2,13 @@ extends Node
 
 # TODO: A Compra é uma gambiarra impossível de expandir, vou mudar isso depois do protótipo. - Marcos
 
+var BaratoPesq: bool = true
+var BaratoPreco: int = 0
+var MedioPesq: bool = false
+var MedioPreco: int = 10
+var BomPesq: bool = false
+var BomPreco: int = 100
+
 # Ruim
 var HddRComprado: bool = true
 var HddRPreco: float = 50.0

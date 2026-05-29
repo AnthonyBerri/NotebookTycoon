@@ -8,42 +8,52 @@ func _on_buy_menu_atualizar_lista(oi: String) -> void:
 	botao.visible = true
 	item = oi
 	
-	lista.set_item_text(0, "%s barata" % oi)
-	lista.set_item_text(1, "%s mediana" % oi)
-	lista.set_item_text(2, "%s ruim" % oi)
+	if(DadosCompra.BaratoPesq):
+		lista.add_item("Barato", 0)
+		lista.set_item_text(0, "%s barata" % oi)
+	if(DadosCompra.MedioPesq):
+		lista.add_item("Medio", 1)
+		lista.set_item_text(1, "%s mediana" % oi)
+	if(DadosCompra.BomPesq):
+		lista.add_item("Bom", 2)
+		lista.set_item_text(2, "%s boa" % oi)
 	
 	if (oi == "Armazenamento"):
-		lista.set_item_text(0, "Armazenamento barato")
-		lista.set_item_text(1, "Armazenamento mediano") # Usa pronome diferente, sei lá
-		if (DadosCompra.HddRComprado == true):
+		lista.set_item_text(0, "%s barato" % oi)
+		lista.set_item_text(1, "%s mediano" % oi)
+		lista.set_item_text(2, "%s bom" % oi)
+		if (DadosCompra.HddRComprado && DadosCompra.BaratoPesq):
 			lista.set_item_disabled(0, true)
-		if (DadosCompra.HddMComprado == true):
+		if (DadosCompra.HddMComprado && DadosCompra.MedioPesq):
 			lista.set_item_disabled(1, true)
-		if (DadosCompra.HddBComprado == true):
+		if (DadosCompra.HddBComprado && DadosCompra.BomPesq):
 			lista.set_item_disabled(2, true)
 			
 	elif (oi == "RAM"):
-		if (DadosCompra.RamRComprada == true):
+		if (DadosCompra.RamRComprada && DadosCompra.BaratoPesq):
 			lista.set_item_disabled(0, true)
-		if (DadosCompra.RamMComprada == true):
+		if (DadosCompra.RamMComprada && DadosCompra.MedioPesq):
 			lista.set_item_disabled(1, true)
-		if (DadosCompra.RamBComprada == true):
+		if (DadosCompra.RamBComprada && DadosCompra.BomPesq):
 			lista.set_item_disabled(2, true)
 			
 	elif (oi == "Placa Mãe"):
-		if (DadosCompra.MbrRComprada == true):
+		if (DadosCompra.MbrRComprada && DadosCompra.BaratoPesq):
 			lista.set_item_disabled(0, true)
-		if (DadosCompra.MbrMComprada == true):
+		if (DadosCompra.MbrMComprada && DadosCompra.MedioPesq):
 			lista.set_item_disabled(1, true)
-		if (DadosCompra.MbrBComprada == true):
+		if (DadosCompra.MbrBComprada && DadosCompra.BomPesq):
 			lista.set_item_disabled(2, true)
 			
 	elif (oi == "Processador"):
-		if (DadosCompra.CpuRComprada == true):
+		lista.set_item_text(0, "%s barato" % oi)
+		lista.set_item_text(1, "%s mediano" % oi)
+		lista.set_item_text(2, "%s bom" % oi)
+		if (DadosCompra.CpuRComprada && DadosCompra.BaratoPesq):
 			lista.set_item_disabled(0, true)
-		if (DadosCompra.CpuMComprada == true):
+		if (DadosCompra.CpuMComprada && DadosCompra.MedioPesq):
 			lista.set_item_disabled(1, true)
-		if (DadosCompra.CpuBComprada == true):
+		if (DadosCompra.CpuBComprada && DadosCompra.BomPesq):
 			lista.set_item_disabled(2, true)
 			
 	else:
