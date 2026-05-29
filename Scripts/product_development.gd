@@ -7,7 +7,7 @@ extends Control
 
 @onready var custo_uni_label = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/SpinBox
 @onready var preco_prod = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SpinBox
-@onready var prob_label = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SpinBox
+@onready var prob_label = $Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/PanelContainer/MarginContainer/Label
 @onready var lucro_label = $Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/Panel2/PanelContainer2/MarginContainer2/Label2
 
 @onready var btb_produzir = $Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/Panel/Button4
@@ -23,11 +23,52 @@ func _ready() -> void:
 	atualizar_status_producao()
 
 func _on_produzir_button_pressed():
-	var preco = preco_prod.value
-	DadosGlobais.dinheiro -= custo_total
-	janela_fechada.emit(true, 0)
+	var pm_id = placa_mae_options.selected
+	var p_id = processador_options.selected
+	var rm_id = ram_options.selected
+	var az_id = armazenamento_options.selected
+	
+	var custo_base = 150
+	var custo_total_por_peca = 0
+	for index in [pm_id, p_id, rm_id, az_id]:
+		custo_total_por_peca += custo_base * (index + 1)
+
+	var lucro_unitario = preco_prod.value - custo_total_por_peca
+
+	var prob_final = calcular_probabilidade([pm_id, p_id, rm_id, az_id])
+	
+	# 3. Joga os dados da Sorte (RNG)
+	var sorte = randi_range(1, 100)
+	var resultado_do_grafico = 0
+	var multiplicador_vendas = 0.0
+	
+	if sorte <= prob_final:
+		resultado_do_grafico = 2 
+		multiplicador_vendas = 1.0 
+	elif sorte <= (prob_final + 20): 
+		resultado_do_grafico = 1 
+		multiplicador_vendas = 0.4 
+	else:
+		resultado_do_grafico = 0
+		multiplicador_vendas = 0.1
+		
+	var clientes_potenciais = prob_final * 10 
+	
+	var unidades_vendidas = clientes_potenciais * multiplicador_vendas
+	var lucro_final_do_lote = unidades_vendidas * lucro_unitario
+	
+	DadosGlobais.dinheiro += lucro_final_do_lote
+	
+	DadosGlobais.pontos += (resultado_do_grafico * 10) + 5
+	
+	DadosGlobais.avancar_tempo(7)
+	
+	#print("Clientes Potenciais: ", clientes_potenciais)
+	#print("Unidades Vendidas: ", unidades_vendidas)
+	#print("Lucro Entrando na Conta: $", lucro_final_do_lote)
+	
+	janela_fechada.emit(true, resultado_do_grafico)
 	queue_free()
-	print("Iniciando fabricação de ", preco, " notebooks!")
 
 func _on_qualquer_peca_item_selected():
 	atualizar_status_producao()
@@ -98,7 +139,29 @@ func atualizar_status_producao_index(indexes: Array[int]):
 	lucro_label.text = "Lucro/produto: [" + formatar_dinheiro_tycoon(custo_total) + "]"
 	if(custo_total_por_peca > preco_prod.value):
 		preco_prod.value = int(custo_uni_label.text)
+		
+	var probabilidade = calcular_probabilidade(indexes)
+	prob_label.text = "Probabilidade de sucesso: [" + str(probabilidade) + "%]"
 	
+func calcular_probabilidade(indexes: Array[int]) -> int:
+	var chance: int = 30 
+	
+	var max_tier = 0
+	var min_tier = 2
+	
+	for tier in indexes:
+		chance += tier * 15
+		
+		if tier > max_tier: max_tier = tier
+		if tier < min_tier: min_tier = tier
+		
+	var diferenca = max_tier - min_tier
+	if diferenca == 2:
+		chance -= 35
+	elif diferenca == 1:
+		chance -= 10
+		
+	return clamp(chance, 0, 100)
 
 
 func _on_button_3_pressed() -> void:

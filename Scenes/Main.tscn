@@ -1,12 +1,99 @@
 [gd_scene format=3 uid="uid://dssjv6d4na7l0"]
 
 [ext_resource type="Script" uid="uid://43fdsynrqtnn" path="res://Scripts/main.gd" id="1_r150o"]
+[ext_resource type="FontFile" uid="uid://bydpvmsyo2v35" path="res://Fonts/w95f.woff2" id="2_idj7w"]
+[ext_resource type="Texture2D" uid="uid://bcmf0ahjbr44k" path="res://Sprites/26799-16x16x4.png" id="3_kln2b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r150o"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rgh2o"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbw6q"]
+bg_color = Color(0, 0, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1gob"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jw32o"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50glp"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy5pj"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bmxlf"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kpch"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_grg3l"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frkhe"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1p5hy"]
+bg_color = Color(0, 0, 0, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1m7h"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erwvk"]
+bg_color = Color(18.892157, 18.892157, 18.892157, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
 [node name="Main" type="Node" unique_id=1164011906]
 script = ExtResource("1_r150o")
+
+[node name="PanelContainer" type="ColorRect" parent="." unique_id=823771921]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.5019608, 0.5019608, 1)
 
 [node name="HUD" type="Control" parent="." unique_id=958041309]
 layout_mode = 3
@@ -60,26 +147,31 @@ theme_override_constants/margin_bottom = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD/BBar/MarginContainer" unique_id=1278812411]
 layout_mode = 2
+theme_override_constants/separation = 25
 
 [node name="Button" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer" unique_id=592149178]
-custom_minimum_size = Vector2(200, 64)
+custom_minimum_size = Vector2(200, 52)
 layout_mode = 2
 size_flags_vertical = 4
 text = "Menu"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD/BBar/MarginContainer/HBoxContainer" unique_id=633193306]
 layout_mode = 2
+theme_override_constants/separation = 15
 
 [node name="BuyBtn" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=738525891]
+custom_minimum_size = Vector2(0, 52)
 layout_mode = 2
 text = "Comprar Peças
 "
 
 [node name="DevBtn2" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=441253168]
+custom_minimum_size = Vector2(0, 52)
 layout_mode = 2
 text = "Desenvolver Produto"
 
 [node name="RnDBtn3" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=36475281]
+custom_minimum_size = Vector2(0, 52)
 layout_mode = 2
 text = "Pesquisar"
 
@@ -90,8 +182,9 @@ size_flags_horizontal = 10
 theme_override_constants/separation = 32
 
 [node name="PointsBg" type="Panel" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=1604083907]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(200, 52)
 layout_mode = 2
+size_flags_vertical = 4
 
 [node name="PointsLbl" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/PointsBg" unique_id=2115390607]
 layout_mode = 1
@@ -105,8 +198,10 @@ offset_top = -11.528001
 offset_right = 73.5
 offset_bottom = 11.471999
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_idj7w")
 text = "Pontos de Pesquisa"
 horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Points" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/PointsBg" unique_id=1236491042]
@@ -122,12 +217,15 @@ offset_right = 73.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_idj7w")
 text = "0000000000000123"
 horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="MoneyBg" type="Panel" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=857827922]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(200, 52)
 layout_mode = 2
+size_flags_vertical = 4
 
 [node name="MoneyLbl" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/MoneyBg" unique_id=1273387337]
 layout_mode = 1
@@ -141,8 +239,10 @@ offset_top = -11.528001
 offset_right = 73.5
 offset_bottom = 11.471999
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_idj7w")
 text = "Dinheiro"
 horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Money" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/MoneyBg" unique_id=1387301254]
@@ -158,13 +258,182 @@ offset_right = 73.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_idj7w")
 text = "$1999"
 horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="Date" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=1420272959]
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_idj7w")
 text = "DD/MM/AAAA     "
+
+[node name="Janela" type="Panel" parent="HUD" unique_id=1982975851]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 1
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 500.0
+offset_bottom = 450.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rgh2o")
+
+[node name="MarginContainer2" type="MarginContainer" parent="HUD/Janela" unique_id=1513499747]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/Janela/MarginContainer2" unique_id=1860861514]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Titulo" type="PanelContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer" unique_id=259691267]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pbw6q")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer/Titulo" unique_id=1070244678]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=201236134]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("3_kln2b")
+
+[node name="Label" type="Label" parent="HUD/Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=1717994149]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_idj7w")
+theme_override_font_sizes/font_size = 24
+text = "NotebookTycoon - Alugel"
+
+[node name="Control" type="Control" parent="HUD/Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=457229448]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control" unique_id=914909161]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -109.53497
+offset_top = -20.0
+offset_right = -5.534973
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="HUD/Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer" unique_id=968575306]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_idj7w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v1gob")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jw32o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_50glp")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_vy5pj")
+text = "_"
+
+[node name="Button2" type="Button" parent="HUD/Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer" unique_id=626037451]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_bmxlf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4kpch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_grg3l")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_vy5pj")
+text = "[ ]"
+
+[node name="Button3" type="Button" parent="HUD/Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer" unique_id=829071420]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_bmxlf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4kpch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_frkhe")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_vy5pj")
+text = "X"
+
+[node name="EditArea" type="PanelContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer" unique_id=1032003288]
+custom_minimum_size = Vector2(150, 350)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p5hy")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer/EditArea" unique_id=658647967]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer" unique_id=687315685]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1m7h")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer" unique_id=633802802]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer" unique_id=193846994]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=421706447]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_erwvk")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer" unique_id=1229494598]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer" unique_id=1242017590]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="HUD/Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=48936939]
+custom_minimum_size = Vector2(391, 300)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_idj7w")
+theme_override_font_sizes/font_size = 24
+autowrap_mode = 2
 
 [connection signal="pressed" from="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/BuyBtn" to="." method="_on_buy_btn_pressed"]
 [connection signal="pressed" from="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/DevBtn2" to="." method="_on_dev_btn_2_pressed"]
