@@ -44,7 +44,7 @@ func _on_product_development_fechado(produziu : bool, grafico : int):
 		var instancia_ui = cena_graficos.instantiate()
 		$HUD.add_child(instancia_ui)
 		$HUD.move_child(instancia_ui, 0)
-		instancia_ui._on_grafico(grafico)
+		instancia_ui.mudar_grafico(grafico)
 	elif(produziu == true && grafico < 0):
 		$HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/DevBtn2.disabled = false
 		
