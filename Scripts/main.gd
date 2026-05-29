@@ -1,6 +1,6 @@
 extends Node
 
-@onready var btn_criacao = $HUD/BBar/DevBtn2
+@onready var btn_criacao = $"HUD/BBar/DevBtn2"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/MoneyBg/Money.text = "$ " + str(DadosGlobais.dinheiro)
 	$HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/PointsBg/Points.text = str(DadosGlobais.pontos)
 

@@ -29,7 +29,7 @@ func _on_produzir_button_pressed():
 	queue_free()
 	print("Iniciando fabricação de ", quantidade, " notebooks!")
 
-func _on_qualquer_peca_item_selected(index):
+func _on_qualquer_peca_item_selected():
 	atualizar_status_producao()
 
 func atualizar_status_producao():

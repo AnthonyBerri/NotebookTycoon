@@ -38,7 +38,7 @@ func _on_buy_menu_atualizar_lista(oi: String) -> void:
 		if (DadosCompra.MbrBComprada == true):
 			lista.set_item_disabled(2, true)
 			
-	elif (oi == "CPU"):
+	elif (oi == "Processador"):
 		if (DadosCompra.CpuRComprada == true):
 			lista.set_item_disabled(0, true)
 		if (DadosCompra.CpuMComprada == true):

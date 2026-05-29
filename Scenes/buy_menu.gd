@@ -24,12 +24,12 @@ func _on_mbr_btn_pressed() -> void:
 
 func _on_cpu_btn_pressed() -> void:
 	toggle_btns(true)
-	atualizar_lista.emit("CPU")
+	atualizar_lista.emit("Processador")
 
 func _on_voltar_pressed() -> void:
 	toggle_btns(false)
 
-func toggle_btns(comprar: bool) -> void:
+func toggle_btns(comprar: bool) -> void: # true para sumir os filtros e comprar, false pro contrário
 	Filtros.visible = !comprar
 	Itens.visible = comprar
 
