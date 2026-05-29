@@ -34,5 +34,5 @@ func toggle_btns(comprar: bool) -> void:
 	Itens.visible = comprar
 
 func _on_leave_menu_janela_fechada() -> void:
-	janela_fechada.emit(false, 0)
+	janela_fechada.emit()
 	queue_free()
