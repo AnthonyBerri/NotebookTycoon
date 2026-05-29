@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bc4fuebh1b44g"]
 
-[ext_resource type="Texture2D" uid="uid://4w1wh2t7buxn" path="res://Sprites/26799-16x16x4.png" id="1_8tcvj"]
+[ext_resource type="Texture2D" uid="uid://bcmf0ahjbr44k" path="res://Sprites/26799-16x16x4.png" id="1_8tcvj"]
 [ext_resource type="Script" uid="uid://bccd64723lj7i" path="res://Scripts/product_development.gd" id="1_myb6p"]
-[ext_resource type="FontFile" uid="uid://b48ku1btpodiy" path="res://Fonts/w95f.woff2" id="2_kjiey"]
-[ext_resource type="Texture2D" uid="uid://d27eiw0m3wnck" path="res://Images/PlaceholderNotebook.png" id="3_kjiey"]
+[ext_resource type="FontFile" uid="uid://bydpvmsyo2v35" path="res://Fonts/w95f.woff2" id="2_kjiey"]
+[ext_resource type="Texture2D" uid="uid://bltebuf7q72da" path="res://Images/PlaceholderNotebook.png" id="3_kjiey"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0s1qy"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
@@ -108,22 +108,39 @@ LineEdit/fonts/font = ExtResource("2_kjiey")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_12c3h")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_282n6"]
-bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
-border_width_top = 1
-border_width_right = 1
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4biul"]
-bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4biul"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4vl5"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 1
-border_color = Color(1, 1, 1, 1)
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kngxp"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbqp0"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2x8ns"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccj6c"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ws4m"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytwox"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_si4sx"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yj11"]
 bg_color = Color(0.5803922, 0.57254905, 0.5764706, 1)
@@ -452,7 +469,7 @@ popup/item_2/id = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=926564746]
 layout_mode = 2
-theme_override_constants/separation = 44
+theme_override_constants/separation = 91
 
 [node name="Label5" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1689852696]
 layout_mode = 2
@@ -460,15 +477,56 @@ size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_kjiey")
 theme_override_font_sizes/font_size = 24
-text = "Quantidade fabricada"
+text = "Custo por Unidade"
 
-[node name="SpinBox" type="SpinBox" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2069878635]
+[node name="SpinBox" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1379112878]
+custom_minimum_size = Vector2(105, 0)
 layout_mode = 2
+size_flags_horizontal = 8
 theme = SubResource("Theme_aodgd")
-theme_override_styles/up_background = SubResource("StyleBoxFlat_282n6")
-theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_4biul")
-theme_override_styles/field_and_buttons_separator = SubResource("StyleBoxFlat_d4vl5")
-value = 1.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_282n6")
+text = "$ 400"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=58723207]
+layout_mode = 2
+theme_override_constants/separation = 81
+
+[node name="Label5" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1563992706]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kjiey")
+theme_override_font_sizes/font_size = 24
+text = "Preço do Produto"
+
+[node name="SpinBox" type="SpinBox" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=545439181]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = SubResource("Theme_aodgd")
+theme_override_colors/up_icon_modulate = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/up_hover_icon_modulate = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/up_pressed_icon_modulate = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/down_icon_modulate = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/down_hover_icon_modulate = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/down_pressed_icon_modulate = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_constants/field_and_buttons_separation = 0
+theme_override_styles/up_background = SubResource("StyleBoxFlat_4biul")
+theme_override_styles/up_background_hovered = SubResource("StyleBoxFlat_d4vl5")
+theme_override_styles/up_background_pressed = SubResource("StyleBoxFlat_kngxp")
+theme_override_styles/up_background_disabled = SubResource("StyleBoxFlat_kbqp0")
+theme_override_styles/down_background = SubResource("StyleBoxFlat_2x8ns")
+theme_override_styles/down_background_hovered = SubResource("StyleBoxFlat_ccj6c")
+theme_override_styles/down_background_pressed = SubResource("StyleBoxFlat_6ws4m")
+theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_ytwox")
+theme_override_styles/up_down_buttons_separator = SubResource("StyleBoxFlat_si4sx")
+max_value = 9999999.0
+alignment = 2
 
 [node name="PanelContainer2" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1792555098]
 custom_minimum_size = Vector2(400, 0)
@@ -533,7 +591,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_kjiey")
 theme_override_font_sizes/font_size = 32
-text = "Dinheiro gasto/prod [$9999]"
+text = "Lucro/produto [$9999]"
 
 [node name="PanelContainer" type="PanelContainer" parent="Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer" unique_id=1915770775]
 custom_minimum_size = Vector2(275, 0)
@@ -595,4 +653,5 @@ text = "Produzir"
 [connection signal="item_selected" from="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/OptionButton2" to="." method="_on_qualquer_peca_item_selected"]
 [connection signal="item_selected" from="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/OptionButton3" to="." method="_on_qualquer_peca_item_selected"]
 [connection signal="item_selected" from="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/OptionButton4" to="." method="_on_qualquer_peca_item_selected"]
+[connection signal="value_changed" from="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SpinBox" to="." method="_on_spin_box_value_changed"]
 [connection signal="pressed" from="Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/Panel/Button4" to="." method="_on_produzir_button_pressed"]

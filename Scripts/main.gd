@@ -1,6 +1,6 @@
 extends Node
 
-@onready var btn_criacao = $"HUD/BBar/DevBtn2"
+@onready var btn_criacao = $HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/DevBtn2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -44,8 +44,12 @@ func _on_product_development_fechado(produziu : bool, grafico : int):
 		var instancia_ui = cena_graficos.instantiate()
 		$HUD.add_child(instancia_ui)
 		$HUD.move_child(instancia_ui, 0)
+		instancia_ui.janela_fechada.connect(_on_graphic_fechado)
 		instancia_ui.mudar_grafico(grafico)
-	elif(produziu == true && grafico < 0):
+	elif(produziu == false && grafico < 0):
 		$HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/DevBtn2.disabled = false
+		
+func _on_graphic_fechado():
+	$HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/DevBtn2.disabled = false
 		
 		

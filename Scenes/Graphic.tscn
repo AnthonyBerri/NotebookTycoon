@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c6i7gxxevxfuy"]
 
 [ext_resource type="Script" uid="uid://c6mp1g4i8h7gq" path="res://Scenes/graphic.gd" id="1_g4x7r"]
-[ext_resource type="Texture2D" uid="uid://b3xqm31k6625x" path="res://Sprites/Internet_Explorer_1997_Icon_Beta.webp" id="2_di26w"]
-[ext_resource type="FontFile" uid="uid://d35t88cj5sbs4" path="res://Fonts/w95f.woff2" id="3_gaa0n"]
-[ext_resource type="Texture2D" uid="uid://bprl6vjxhcbs5" path="res://Images/PlaceholderNotebook.png" id="4_8u75l"]
+[ext_resource type="Texture2D" uid="uid://4s87p1f7fclu" path="res://Sprites/Internet_Explorer_1997_Icon_Beta.webp" id="2_di26w"]
+[ext_resource type="FontFile" uid="uid://bydpvmsyo2v35" path="res://Fonts/w95f.woff2" id="3_gaa0n"]
+[ext_resource type="Texture2D" uid="uid://bltebuf7q72da" path="res://Images/PlaceholderNotebook.png" id="4_8u75l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxqqh"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
@@ -380,4 +380,4 @@ size_flags_vertical = 0
 texture = ExtResource("4_8u75l")
 expand_mode = 1
 
-[connection signal="grafico" from="." to="." method="_on_grafico"]
+[connection signal="pressed" from="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer/Button3" to="." method="_on_button_3_pressed"]

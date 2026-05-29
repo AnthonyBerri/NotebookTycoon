@@ -5,10 +5,10 @@ extends Control
 @onready var ram_options = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/OptionButton3
 @onready var armazenamento_options = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/OptionButton4
 
-@onready var quantidade_spinbox = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/SpinBox
-
-@onready var prob_label = $Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/PanelContainer/MarginContainer/Label
-@onready var total_label = $Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/Panel2/PanelContainer2/MarginContainer2/Label2
+@onready var custo_uni_label = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/SpinBox
+@onready var preco_prod = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SpinBox
+@onready var prob_label = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SpinBox
+@onready var lucro_label = $Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/Panel2/PanelContainer2/MarginContainer2/Label2
 
 @onready var btb_produzir = $Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/Panel/Button4
 
@@ -23,20 +23,20 @@ func _ready() -> void:
 	atualizar_status_producao()
 
 func _on_produzir_button_pressed():
-	var quantidade = quantidade_spinbox.value
+	var preco = preco_prod.value
 	DadosGlobais.dinheiro -= custo_total
 	janela_fechada.emit(true, 0)
 	queue_free()
-	print("Iniciando fabricação de ", quantidade, " notebooks!")
+	print("Iniciando fabricação de ", preco, " notebooks!")
 
 func _on_qualquer_peca_item_selected():
 	atualizar_status_producao()
 
 func atualizar_status_producao():
 	var custo_base = 150
-	custo_total = custo_base * quantidade_spinbox.value
+	#custo_total = custo_base * quantidade_spinbox.value
 	
-	total_label.text = "Dinheiro gasto/prod: [$" + formatar_dinheiro_tycoon(custo_total) + "]"
+	custo_uni_label.text = formatar_dinheiro_tycoon(custo_total)
 
 func formatar_dinheiro_tycoon(valor: float) -> String:
 	var sufixos = ["", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc"]
@@ -91,12 +91,21 @@ func atualizar_status_producao_index(indexes: Array[int]):
 	var custo_total_por_peca = 0
 	for index in indexes:
 		custo_total_por_peca += custo_base * (index + 1)
+		
+	custo_uni_label.text = formatar_dinheiro_tycoon(custo_total_por_peca)
 		 
-	custo_total = custo_total_por_peca * quantidade_spinbox.value
-	total_label.text = "Dinheiro gasto/prod: [$" + formatar_dinheiro_tycoon(custo_total) + "]"
+	custo_total = (int(preco_prod.value) - custo_total_por_peca)
+	lucro_label.text = "Lucro/produto: [" + formatar_dinheiro_tycoon(custo_total) + "]"
+	if(custo_total_por_peca > preco_prod.value):
+		preco_prod.value = int(custo_uni_label.text)
 	
 
 
 func _on_button_3_pressed() -> void:
-	janela_fechada.emit(false, 0)
+	janela_fechada.emit(false, -1)
 	queue_free()
+
+
+func _on_spin_box_value_changed(value: float) -> void:
+	if(int(custo_uni_label.text) > value):
+		preco_prod.value = int(custo_uni_label.text)
