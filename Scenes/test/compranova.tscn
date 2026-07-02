@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b1hdx4hj6yvyf"]
+
+[ext_resource type="Script" uid="uid://l281ifsncfa7" path="res://Scenes/test/Scripts/compra_machine.gd" id="1_g2b81"]
+[ext_resource type="Script" uid="uid://bvxum0lulrca8" path="res://Scenes/test/Scripts/pesquisa.gd" id="2_gmxoi"]
+[ext_resource type="Script" uid="uid://cq2w84e8w1u5b" path="res://Scenes/test/Scripts/parte.gd" id="3_1p5uw"]
+
+[node name="Compra Machine" type="Node" unique_id=77388851]
+script = ExtResource("1_g2b81")
+
+[node name="Pesquisa Barata" type="Node" parent="." unique_id=62269156]
+script = ExtResource("2_gmxoi")
+Pesquisado = true
+Valor = 0
+
+[node name="HDD Barato" type="Node" parent="Pesquisa Barata" unique_id=155423090]
+script = ExtResource("3_1p5uw")
+Comprado = true
+Valor = 50
+Nome = "HDD Barato"
+
+[node name="Ram Barata" type="Node" parent="Pesquisa Barata" unique_id=1371443349]
+script = ExtResource("3_1p5uw")
+Comprado = true
+Valor = 50
+Nome = "Ram Barata"
+
+[node name="Placa Mãe Barata" type="Node" parent="Pesquisa Barata" unique_id=1691873493]
+script = ExtResource("3_1p5uw")
+Comprado = true
+Valor = 50
+Nome = "Placa Mãe Barata"
+
+[node name="Processador Barato" type="Node" parent="Pesquisa Barata" unique_id=1630781937]
+script = ExtResource("3_1p5uw")
+Comprado = true
+Valor = 50
+Nome = "Processador Barato"
