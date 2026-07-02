@@ -1,11 +1,11 @@
 extends Panel
 
-@onready var BaratoBtn = $"Research/Barato"
-@onready var BaratoPts = $"Research/Barato/Pontos"
-@onready var MedioBtn = $"Research/Medio"
-@onready var MedioPts = $"Research/Medio/Pontos"
-@onready var BomBtn = $"Research/Bom"
-@onready var BomPts = $"Research/Bom/Pontos"
+@export var BaratoBtn : Node
+@export var BaratoPts : Node
+@export var MedioBtn : Node
+@export var MedioPts : Node
+@export var BomBtn : Node
+@export var BomPts : Node
 
 signal janela_fechada()
 

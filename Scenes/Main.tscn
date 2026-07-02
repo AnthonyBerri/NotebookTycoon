@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://dssjv6d4na7l0"]
+[gd_scene format=3 uid="uid://b8v7704u4ig5c"]
 
 [ext_resource type="Script" uid="uid://43fdsynrqtnn" path="res://Scripts/main.gd" id="1_r150o"]
-[ext_resource type="FontFile" uid="uid://bydpvmsyo2v35" path="res://Fonts/w95f.woff2" id="2_idj7w"]
-[ext_resource type="Texture2D" uid="uid://bcmf0ahjbr44k" path="res://Sprites/26799-16x16x4.png" id="3_kln2b"]
+[ext_resource type="FontFile" uid="uid://b48ku1btpodiy" path="res://Fonts/w95f.woff2" id="2_idj7w"]
+[ext_resource type="Texture2D" uid="uid://4w1wh2t7buxn" path="res://Sprites/26799-16x16x4.png" id="3_kln2b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r150o"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
