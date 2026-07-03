@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bc4fuebh1b44g"]
 
-[ext_resource type="Texture2D" uid="uid://4w1wh2t7buxn" path="res://Sprites/26799-16x16x4.png" id="1_8tcvj"]
 [ext_resource type="Script" uid="uid://bccd64723lj7i" path="res://Scripts/product_development.gd" id="1_myb6p"]
-[ext_resource type="FontFile" uid="uid://b48ku1btpodiy" path="res://Fonts/w95f.woff2" id="2_kjiey"]
-[ext_resource type="Texture2D" uid="uid://d27eiw0m3wnck" path="res://Images/PlaceholderNotebook.png" id="3_kjiey"]
+[ext_resource type="FontFile" uid="uid://bydpvmsyo2v35" path="res://Fonts/w95f.woff2" id="2_kjiey"]
+[ext_resource type="Texture2D" uid="uid://bcmf0ahjbr44k" path="res://Sprites/icos/26799-16x16x4.png" id="2_myb6p"]
+[ext_resource type="Texture2D" uid="uid://bltebuf7q72da" path="res://Images/PlaceholderNotebook.png" id="3_kjiey"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0s1qy"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
@@ -221,7 +221,7 @@ theme_override_constants/separation = 8
 [node name="TextureRect" type="TextureRect" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=1414195727]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("1_8tcvj")
+texture = ExtResource("2_myb6p")
 
 [node name="Label" type="Label" parent="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=1644315906]
 layout_mode = 2

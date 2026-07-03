@@ -1,11 +1,46 @@
 [gd_scene format=3 uid="uid://b8v7704u4ig5c"]
 
 [ext_resource type="Script" uid="uid://43fdsynrqtnn" path="res://Scripts/main.gd" id="1_r150o"]
-[ext_resource type="FontFile" uid="uid://b48ku1btpodiy" path="res://Fonts/w95f.woff2" id="2_idj7w"]
-[ext_resource type="Texture2D" uid="uid://4w1wh2t7buxn" path="res://Sprites/26799-16x16x4.png" id="3_kln2b"]
+[ext_resource type="FontFile" uid="uid://bydpvmsyo2v35" path="res://Fonts/w95f.woff2" id="2_idj7w"]
+[ext_resource type="Texture2D" uid="uid://bcmf0ahjbr44k" path="res://Sprites/icos/26799-16x16x4.png" id="3_kln2b"]
+[ext_resource type="AudioStream" uid="uid://r8rqbgd8ma8a" path="res://Audio/Microsoft Windows 95 Startup Sound - Ballyweg (320k).mp3" id="4_rgh2o"]
+[ext_resource type="AudioStream" uid="uid://l4h3g0j0xxsl" path="res://Audio/Midnight Run.mp3" id="5_pbw6q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r150o"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bmxlf"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+shadow_size = 1
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kpch"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frkhe"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy5pj"]
+bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ciwwl"]
+bg_color = Color(0.6310346, 0.6310351, 0.6310347, 0.7529412)
+border_width_left = 1
+border_width_top = 1
+border_color = Color(0.15967038, 0.15967038, 0.15967023, 1)
+shadow_color = Color(0.93262476, 0.9326248, 0.93262476, 1)
+shadow_size = 1
+shadow_offset = Vector2(1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rgh2o"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
@@ -36,29 +71,7 @@ border_width_left = 2
 border_width_top = 2
 border_color = Color(1, 1, 1, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy5pj"]
-bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
-border_width_left = 2
-border_width_top = 2
-border_color = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bmxlf"]
-bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
-border_width_left = 2
-border_width_top = 2
-border_color = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kpch"]
-bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
-border_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_grg3l"]
-bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
-border_width_left = 2
-border_width_top = 2
-border_color = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frkhe"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
 border_width_left = 2
 border_width_top = 2
@@ -153,6 +166,16 @@ theme_override_constants/separation = 25
 custom_minimum_size = Vector2(200, 52)
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_idj7w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bmxlf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4kpch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_frkhe")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_vy5pj")
 text = "Menu"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD/BBar/MarginContainer/HBoxContainer" unique_id=633193306]
@@ -162,17 +185,47 @@ theme_override_constants/separation = 15
 [node name="BuyBtn" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=738525891]
 custom_minimum_size = Vector2(0, 52)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_idj7w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bmxlf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4kpch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_frkhe")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_vy5pj")
 text = "Comprar Peças
 "
 
 [node name="DevBtn2" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=441253168]
 custom_minimum_size = Vector2(0, 52)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_idj7w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bmxlf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4kpch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_frkhe")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_vy5pj")
 text = "Desenvolver Produto"
 
 [node name="RnDBtn3" type="Button" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=36475281]
 custom_minimum_size = Vector2(0, 52)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_idj7w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bmxlf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4kpch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_frkhe")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_vy5pj")
 text = "Pesquisar"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="HUD/BBar/MarginContainer/HBoxContainer" unique_id=1395655681]
@@ -185,6 +238,7 @@ theme_override_constants/separation = 32
 custom_minimum_size = Vector2(200, 52)
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_ciwwl")
 
 [node name="PointsLbl" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/PointsBg" unique_id=2115390607]
 layout_mode = 1
@@ -198,11 +252,11 @@ offset_top = -11.528001
 offset_right = 73.5
 offset_bottom = 11.471999
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_idj7w")
 text = "Pontos de Pesquisa"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Points" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/PointsBg" unique_id=1236491042]
 layout_mode = 1
@@ -217,6 +271,7 @@ offset_right = 73.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_idj7w")
 text = "0000000000000123"
 horizontal_alignment = 1
@@ -226,6 +281,7 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(200, 52)
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_ciwwl")
 
 [node name="MoneyLbl" type="Label" parent="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer2/MoneyBg" unique_id=1273387337]
 layout_mode = 1
@@ -239,6 +295,7 @@ offset_top = -11.528001
 offset_right = 73.5
 offset_bottom = 11.471999
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_idj7w")
 text = "Dinheiro"
 horizontal_alignment = 1
@@ -258,6 +315,7 @@ offset_right = 73.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_idj7w")
 text = "$1999"
 horizontal_alignment = 1
@@ -434,6 +492,12 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_idj7w")
 theme_override_font_sizes/font_size = 24
 autowrap_mode = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1230844793]
+stream = ExtResource("4_rgh2o")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=887333160]
+stream = ExtResource("5_pbw6q")
 
 [connection signal="pressed" from="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/BuyBtn" to="." method="_on_buy_btn_pressed"]
 [connection signal="pressed" from="HUD/BBar/MarginContainer/HBoxContainer/HBoxContainer/DevBtn2" to="." method="_on_dev_btn_2_pressed"]

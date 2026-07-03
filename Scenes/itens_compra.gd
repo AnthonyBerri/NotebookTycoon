@@ -1,7 +1,8 @@
 extends Control
 
-@onready var lista = $ListaCompra
-@onready var botao = $CompraBtn
+@onready var lista = $"../../../PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/ListaCompra"
+@onready var botao = $"../../../PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/CompraBtn"
+@onready var sound = $"../../../../../AudioStreamPlayer2D"
 var item : String
 
 func _on_buy_menu_atualizar_lista(oi: String) -> void:
@@ -67,50 +68,62 @@ func _on_button_pressed() -> void:
 			DadosCompra.HddRComprado = true
 			lista.set_item_disabled(0, true)
 			lista.selected = -1
+			sound.play()
 		elif (lista.selected == 1 && DadosGlobais.dinheiro >= DadosCompra.HddMPreco):
 			DadosCompra.HddMComprado = true
 			lista.set_item_disabled(1, true)
 			lista.selected = -1
+			sound.play()
 		elif (lista.selected == 2 && DadosGlobais.dinheiro >= DadosCompra.HddBPreco):
 			DadosCompra.HddBComprado = true
 			lista.set_item_disabled(2, true)
 			lista.selected = -1
+			sound.play()
 	elif (item == "RAM"):
 		if (lista.selected == 0 && DadosGlobais.dinheiro >= DadosCompra.RamRPreco):
 			DadosCompra.RamRComprada = true
 			lista.set_item_disabled(0, true)
 			lista.selected = -1
+			sound.play()
 		elif (lista.selected == 1 && DadosGlobais.dinheiro >= DadosCompra.RamMPreco):
 			DadosCompra.RamMComprada = true
 			lista.set_item_disabled(1, true)
 			lista.selected = -1
+			sound.play()
 		elif (lista.selected == 2 && DadosGlobais.dinheiro >= DadosCompra.RamBPreco):
 			DadosCompra.RamBComprada = true
 			lista.set_item_disabled(2, true)
 			lista.selected = -1
+			sound.play()
 	if (item == "Placa Mãe"):
 		if (lista.selected == 0 && DadosGlobais.dinheiro >= DadosCompra.MbrRPreco):
 			DadosCompra.MbrRComprada = true
 			lista.set_item_disabled(0, true)
 			lista.selected = -1
+			sound.play()
 		elif (lista.selected == 1 && DadosGlobais.dinheiro >= DadosCompra.MbrMPreco):
 			DadosCompra.MbrMComprada = true
 			lista.set_item_disabled(1, true)
 			lista.selected = -1
+			sound.play()
 		elif (lista.selected == 2 && DadosGlobais.dinheiro >= DadosCompra.MbrBPreco):
 			DadosCompra.MbrBComprada = true
 			lista.set_item_disabled(2, true)
 			lista.selected = -1
+			sound.play()
 	if (item == "CPU"):
 		if (lista.selected == 0 && DadosGlobais.dinheiro >= DadosCompra.CpuRPreco):
 			DadosCompra.CpuRComprada = true
 			lista.set_item_disabled(0, true)
 			lista.selected = -1
+			sound.play()
 		elif (lista.selected == 1 && DadosGlobais.dinheiro >= DadosCompra.CpuMPreco):
 			DadosCompra.CpuMComprada = true
 			lista.set_item_disabled(1, true)
 			lista.selected = -1
+			sound.play()
 		elif (lista.selected == 2 && DadosGlobais.dinheiro >= DadosCompra.CpuBPreco):
 			DadosCompra.CpuBComprada = true
 			lista.set_item_disabled(2, true)
 			lista.selected = -1
+			sound.play()

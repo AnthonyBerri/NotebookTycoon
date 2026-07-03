@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cqphfrtqciivc" path="res://Scenes/rnd_menu.gd" id="1_55sgy"]
 [ext_resource type="Script" uid="uid://c2dggdcldpbmw" path="res://Scenes/leave_menu.gd" id="2_glbjg"]
-[ext_resource type="Texture2D" uid="uid://4w1wh2t7buxn" path="res://Sprites/26799-16x16x4.png" id="3_jflpe"]
-[ext_resource type="FontFile" uid="uid://b48ku1btpodiy" path="res://Fonts/w95f.woff2" id="4_w5452"]
+[ext_resource type="AudioStream" uid="uid://bswibasyilhmk" path="res://Audio/Research.mp3" id="4_fvf7y"]
+[ext_resource type="FontFile" uid="uid://bydpvmsyo2v35" path="res://Fonts/w95f.woff2" id="4_w5452"]
+[ext_resource type="AudioStream" uid="uid://cjqwjd4v3qi12" path="res://Audio/Error Sound.mp3" id="5_jflpe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4dqa"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
@@ -129,7 +130,6 @@ border_color = Color(0, 0.5647059, 0, 1)
 
 [node name="RnDMenu" type="Panel" unique_id=11044140 node_paths=PackedStringArray("BaratoBtn", "BaratoPts", "MedioBtn", "MedioPts", "BomBtn", "BomPts")]
 custom_minimum_size = Vector2(1200, 800)
-anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -177,7 +177,6 @@ theme_override_constants/separation = 8
 [node name="TextureRect" type="TextureRect" parent="MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=594848586]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("3_jflpe")
 
 [node name="Label" type="Label" parent="MarginContainer2/VBoxContainer/Titulo/HBoxContainer" unique_id=1029245790]
 layout_mode = 2
@@ -476,5 +475,15 @@ text = "00000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=877474878]
+stream = ExtResource("4_fvf7y")
+
+[node name="ErrorSound" type="AudioStreamPlayer2D" parent="." unique_id=2041611989]
+stream = ExtResource("5_jflpe")
+
 [connection signal="janela_fechada" from="MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer/Button3" to="." method="_on_leave_menu_janela_fechada"]
+[connection signal="janela_fechada" from="MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer/Button3" to="MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer/Button3" method="_on_janela_fechada"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer/Button3" to="MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Research/Panel3/Barato" to="." method="_on_barato_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Research/Panel4/Medio" to="." method="_on_medio_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Research/Panel5/Bom" to="." method="_on_bom_pressed"]

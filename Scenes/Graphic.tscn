@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://c6i7gxxevxfuy"]
 
 [ext_resource type="Script" uid="uid://c6mp1g4i8h7gq" path="res://Scenes/graphic.gd" id="1_g4x7r"]
-[ext_resource type="Texture2D" uid="uid://4s87p1f7fclu" path="res://Sprites/Internet_Explorer_1997_Icon_Beta.webp" id="2_di26w"]
+[ext_resource type="Texture2D" uid="uid://4s87p1f7fclu" path="res://Sprites/icos/Internet_Explorer_1997_Icon_Beta.webp" id="2_di26w"]
 [ext_resource type="FontFile" uid="uid://bydpvmsyo2v35" path="res://Fonts/w95f.woff2" id="3_gaa0n"]
 [ext_resource type="Texture2D" uid="uid://bltebuf7q72da" path="res://Images/PlaceholderNotebook.png" id="4_8u75l"]
+[ext_resource type="AudioStream" uid="uid://5c80o8i5lcby" path="res://Audio/Register.mp3" id="5_gaa0n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxqqh"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
@@ -100,6 +101,43 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.0076186024, 0.0076186024, 0.0076186024, 1)
+
+[sub_resource type="Animation" id="Animation_gaa0n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel/Panel2:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400, 300)]
+}
+
+[sub_resource type="Animation" id="Animation_8u75l"]
+resource_name = "graphic"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel/Panel2:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(400, 300), Vector2(0, 300)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gxqqh"]
+_data = {
+&"RESET": SubResource("Animation_gaa0n"),
+&"graphic": SubResource("Animation_8u75l")
+}
 
 [node name="Graphic" type="Control" unique_id=497960244]
 layout_mode = 3
@@ -319,6 +357,18 @@ scale = Vector2(1.0577428, 1.0779643)
 points = PackedVector2Array(20, 135, 70, 107, 125, 18, 167, 46, 231, 27, 293, 59, 349, 12, 384.38208, 74.496704)
 default_color = Color(0, 0.3529412, 0.78431374, 1)
 
+[node name="Panel2" type="Panel" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel" unique_id=1363390434]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 0
+scale = Vector2(-1, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_s2uoy")
+
 [node name="Label" type="Label" parent="Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=37797479]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
@@ -379,5 +429,11 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 texture = ExtResource("4_8u75l")
 expand_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1900442700]
+stream = ExtResource("5_gaa0n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1433176465]
+libraries/ = SubResource("AnimationLibrary_gxqqh")
 
 [connection signal="pressed" from="Janela/MarginContainer2/VBoxContainer/Titulo/HBoxContainer/Control/HBoxContainer/Button3" to="." method="_on_button_3_pressed"]

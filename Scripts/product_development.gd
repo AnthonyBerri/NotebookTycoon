@@ -12,6 +12,7 @@ extends Control
 
 @onready var btb_produzir = $Janela/MarginContainer2/VBoxContainer/Stats/MarginContainer/Panel/Button4
 
+
 signal janela_fechada(produziu : bool, grafico : int)
 
 var custo_total = 0
@@ -62,6 +63,8 @@ func _on_produzir_button_pressed():
 	DadosGlobais.pontos += (resultado_do_grafico * 10) + 5
 	
 	DadosGlobais.avancar_tempo(7)
+	
+	
 	
 	#print("Clientes Potenciais: ", clientes_potenciais)
 	#print("Unidades Vendidas: ", unidades_vendidas)

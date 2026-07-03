@@ -4,10 +4,16 @@ extends Control
 @onready var Medio = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel/Medio
 @onready var Bom = $Janela/MarginContainer2/VBoxContainer/EditArea/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Panel/Bom
 
+
+@onready var register = $AudioStreamPlayer2D
+@onready var animation = $AnimationPlayer
+
 signal janela_fechada
 
 func mudar_grafico(qual: int) -> void: # Conecta um sinal nessa função pra setar o gráfico - Marcos
 	# 0 Ruim, 1 Medio, 2 Bom
+	register.play()
+	animation.play("graphic")
 	match qual:
 		0:
 			Ruim.visible = true
@@ -25,4 +31,5 @@ func mudar_grafico(qual: int) -> void: # Conecta um sinal nessa função pra set
 
 func _on_button_3_pressed() -> void:
 	janela_fechada.emit()
+	animation.play_backwards("graphic")
 	queue_free()

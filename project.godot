@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Notebook Tycoon"
-run/main_scene="uid://dssjv6d4na7l0"
+run/main_scene="uid://chg2m5m10ctxr"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 DadosGlobais="*uid://dgdn2atuxfv4a"
 DadosCompra="*uid://dogg4s1rp83ld"
+GerenciadoAudio="*uid://cdhjhx4eoy2sr"
 
 [display]
 
@@ -39,3 +40,4 @@ folder_colors={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/main_scene="uid://chg2m5m10ctxr"

@@ -7,6 +7,9 @@ extends Panel
 @export var BomBtn : Node
 @export var BomPts : Node
 
+@onready var sound = $AudioStreamPlayer2D
+@onready var error = $ErrorSound
+
 signal janela_fechada()
 
 func _ready() -> void: 
@@ -17,12 +20,17 @@ func pesquisar(qual: int) -> void:
 	if(qual == 0 && DadosCompra.BaratoPreco <= DadosGlobais.pontos && DadosCompra.BaratoPesq == false):
 		DadosCompra.BaratoPesq = true
 		DadosGlobais.pontos -= DadosCompra.BaratoPreco
+		sound.play()
 	elif(qual == 1 && DadosCompra.MedioPreco <= DadosGlobais.pontos && DadosCompra.MedioPesq == false && DadosCompra.BaratoPesq == true):
 		DadosCompra.MedioPesq = true
 		DadosGlobais.pontos -= DadosCompra.MedioPreco
+		sound.play()
 	elif(qual == 2 && DadosCompra.BomPreco <= DadosGlobais.pontos && DadosCompra.BomPesq == false && DadosCompra.MedioPesq == true):
 		DadosCompra.BomPesq = true
 		DadosGlobais.pontos -= DadosCompra.BomPreco
+		sound.play()
+	else:
+		error.play()
 	
 	toggle_btns()
 
