@@ -2,5 +2,10 @@ extends Node
 
 @onready var pesquisas : Array = listar_pesquisas()
 
+func _ready():
+	print(pesquisas)
+
 func listar_pesquisas() -> Array:
-	return get_children(false)
+	var pesq : Array = get_children()
+	
+	return pesq

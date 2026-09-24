@@ -11,27 +11,73 @@ script = ExtResource("1_g2b81")
 script = ExtResource("2_gmxoi")
 Pesquisado = true
 Valor = 0
+Nome = "Barato"
 
-[node name="HDD Barato" type="Node" parent="Pesquisa Barata" unique_id=155423090]
+[node name="HDD" type="Node" parent="Pesquisa Barata" unique_id=155423090]
 script = ExtResource("3_1p5uw")
 Comprado = true
 Valor = 50
-Nome = "HDD Barato"
+Nome = "HDD barato"
 
-[node name="Ram Barata" type="Node" parent="Pesquisa Barata" unique_id=1371443349]
+[node name="Ram" type="Node" parent="Pesquisa Barata" unique_id=1371443349]
 script = ExtResource("3_1p5uw")
 Comprado = true
 Valor = 50
-Nome = "Ram Barata"
+Nome = "Ram barata"
 
-[node name="Placa Mãe Barata" type="Node" parent="Pesquisa Barata" unique_id=1691873493]
+[node name="Placa Mãe" type="Node" parent="Pesquisa Barata" unique_id=1691873493]
 script = ExtResource("3_1p5uw")
 Comprado = true
 Valor = 50
-Nome = "Placa Mãe Barata"
+Nome = "Placa Mãe barata"
 
-[node name="Processador Barato" type="Node" parent="Pesquisa Barata" unique_id=1630781937]
+[node name="Processador" type="Node" parent="Pesquisa Barata" unique_id=1630781937]
 script = ExtResource("3_1p5uw")
 Comprado = true
 Valor = 50
-Nome = "Processador Barato"
+Nome = "Processador barato"
+
+[node name="Pesquisa Media" type="Node" parent="." unique_id=1532069464]
+script = ExtResource("2_gmxoi")
+Valor = 10
+Nome = "Médio"
+
+[node name="HDD" type="Node" parent="Pesquisa Media" unique_id=1904392708]
+script = ExtResource("3_1p5uw")
+Nome = "HDD mediano"
+
+[node name="Ram" type="Node" parent="Pesquisa Media" unique_id=127211949]
+script = ExtResource("3_1p5uw")
+Nome = "Ram mediana"
+
+[node name="Placa Mãe" type="Node" parent="Pesquisa Media" unique_id=289830054]
+script = ExtResource("3_1p5uw")
+Nome = "Placa Mãe mediana"
+
+[node name="Processador" type="Node" parent="Pesquisa Media" unique_id=269333461]
+script = ExtResource("3_1p5uw")
+Nome = "Processador mediano"
+
+[node name="Pesquisa Boa" type="Node" parent="." unique_id=1833623489]
+script = ExtResource("2_gmxoi")
+Nome = "Bom"
+
+[node name="HDD" type="Node" parent="Pesquisa Boa" unique_id=80191904]
+script = ExtResource("3_1p5uw")
+Valor = 250
+Nome = "HDD bom"
+
+[node name="Ram" type="Node" parent="Pesquisa Boa" unique_id=1256749309]
+script = ExtResource("3_1p5uw")
+Valor = 250
+Nome = "Ram boa"
+
+[node name="Placa Mãe" type="Node" parent="Pesquisa Boa" unique_id=958849889]
+script = ExtResource("3_1p5uw")
+Valor = 250
+Nome = "Placa Mãe boa"
+
+[node name="Processador" type="Node" parent="Pesquisa Boa" unique_id=1704006867]
+script = ExtResource("3_1p5uw")
+Valor = 250
+Nome = "Processador bom"
