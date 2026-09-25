@@ -1,11 +1,23 @@
 extends Node
 
-@onready var pesquisas : Array = listar_pesquisas()
+@onready var PesquisaBarata : Pesquisa
+@onready var PesquisaMedia : Pesquisa
+@onready var PesquisaBoa : Pesquisa
 
 func _ready():
-	print(pesquisas)
-
-func listar_pesquisas() -> Array:
-	var pesq : Array = get_children()
+	iniciar_pesquisas()
 	
-	return pesq
+
+func iniciar_pesquisas():
+	# Pesquisa Barata
+	PesquisaBarata.Nome = "Barato"
+	PesquisaBarata.Valor = 0
+	PesquisaBarata.Pesquisado = true
+
+func iniciar_partes():
+	# Pesquisa Barata
+	var HDDBarato : Parte
+	HDDBarato.nome = "HDD Barato"
+	HDDBarato.valor = 50
+	HDDBarato.comprado = true
+	HDDBarato
